@@ -144,6 +144,11 @@ function bill() {
     const main = document.querySelectorAll('.main__product')
     let sum = 0
 
+    receipt.style.display = 'block'
+    setTimeout(() => {
+        receipt.style.opacity = '1'
+        receiptWindow.style.top = '35%'
+    }, 500)
     for (let i = 0; i < main.length; i++) {
         let element = main[i],
             mainId = element.getAttribute('id'),
